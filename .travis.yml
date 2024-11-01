@@ -1,4 +1,3 @@
-sudo: required
 services:
   - docker
 before_install:
@@ -22,11 +21,11 @@ deploy:
   region: "us-east-1"  # Replace with your AWS region
   app: "multi-docker-containers"  # Replace with your Elastic Beanstalk Application Name
   env: "multi-docker-containers-env"  # Replace with your Elastic Beanstalk Environment name
-  bucket_name: "elasticbeanstalk-us-east-1-863198229499"  # Replace with your S3 bucket name
+  bucket: "elasticbeanstalk-us-east-1-863198229499"  # Replace with your S3 bucket name
   bucket_path: "docker"  # Replace with your bucket path
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key: "$AWS_SECRET_KEY"
-  skip_cleanup: true
+  cleanup: true
   on:
     branch: master  # Replace with the branch you want to deploy from
 
