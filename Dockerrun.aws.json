@@ -5,12 +5,14 @@
       "name": "client",
       "image": "thomaslong/multi-client",
       "hostname": "client",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "nginx",
       "image": "thomaslong/multi-nginx",
       "essential": true,
+      "memory": 128,
       "portMappings": [
         {
           "hostPort": 80,
@@ -23,12 +25,14 @@
       "name": "server",
       "image": "thomaslong/multi-server",
       "hostname": "api",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "worker",
       "image": "thomaslong/multi-worker",
-      "essential": false
+      "essential": false,
+      "memory": 128
     }
   ]
 }
